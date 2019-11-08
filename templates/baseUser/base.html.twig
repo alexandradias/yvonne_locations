@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    {#meta est utilisé pour donner des directives aux moteurs de recherche
+    La valeur index permet à la page d'être indexée et la valeur follow permet aux liens d'être suivis par les robots
+    et de transmettre de la popularité.#}
+    <meta name="robots" content="index, follow">
+    <title>Chez Yvonne</title>
+
+{#//_______________________________________________________LINKS______________________________________________________#}
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset ('css/user/styleUser.css') }}">
+    <link rel="icon" href="{{ asset('assets/favicon/favicon_lege_512.png') }}" />
+
+</head>
+
+{#//_____________________________________________________BODY START___________________________________________________#}
+<body>
+
+{#//_________________________________________________________________________________________________HEADER USER START#}
+
+{#//Mon header fait parti d'un fichier partiel ce qui me permettra de l'appeler
+sur chacune de mes pages grâce à 'extends'#}
+<header>
+
+    <div class="menu">
+        <div><a href="#gallery_menu"class="text_menu"> Galerie </a></div>
+        <div><a href="#tarif_menu" class="text_menu"> Tarif </a></div>
+        <div><a href="#contact_menu" class="text_menu"> Contact </a></div>
+        {#<div class="text_menu"> Galerie</div>#}
+        {#<div class="text_menu"> Tarif</div>#}
+        {#<div class="text_menu"> Contact</div>#}
+        {#<div class="logo">
+            <a href="{{ path ('home') }}">
+                <img src="{{ asset('assets/logo/logo_1000.png') }}" alt="logo Yvette">
+            </a>
+        </div>#}
+    </div>
+
+</header>
+{#//---------------------------------------------------------------------------------------------------HEADER USER END#}
+
+{#//________________________________________________________________________________________________________MAIN START#}
+
+<main>
+
+    {# //Je mets en place le 'block content' qui me permettra de placer mes éléments
+     //que je souhaite voir modifier à travers mon site web seule cette partie sera différente#}
+
+    <div>
+        {% block content %}
+        {% endblock %}
+    </div>
+    {#j'intègre un icon arrowtop qui va me permettre de remonter vers le haut de ma page
+        son action sera généré depuis mon fichier.js#}
+    <div class="top"><img src="{{ asset('assets/img/arrow_top.svg') }}" alt="icon arrow-top"></div>
+</main>
+
+{#//----------------------------------------------------------------------------------------------------------MAIN END#}
+
+{#//______________________________________________________________________________________________________FOOTER START#}
+
+{#//je mets en place le footer, celui ci fait parti du fichier partiel => présent sur toutes mes vues#}
+<footer>
+
+    <div class="footer">
+        <div class="footer_content">
+            <h3>Notre contact</h3>
+            <br>
+            <br> adressemail@gmail.com
+            <br> 02.00.60.90.90
+        </div>
+        <div class="footer_content">
+            <h3>Notre adresse</h3>
+            <br>
+            <br> # 1 allée du bonheur
+            <br> 33XXX Lège Cap Ferret
+        </div>
+        <div class="footer_content">
+            <h3>Nos conditions générales</h3>
+            <br>
+            <br> Conditions de réservations
+            <br> FAQ
+        </div>
+    </div>
+
+    <div class="sign_site">
+        <div>design by Addesign.studio</div>
+    </div>
+
+
+
+</footer>
+{#//--------------------------------------------------------------------------------------------------------FOOTER END#}
+
+{#//_____________________________________________________SCRIPT JS____________________________________________________#}
+<!--Je charge la bibliotheque jQuery avec un CDN-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<!--Je charge mon fichier .JS qui va utiliser jQuery
+(donc je le charge après jQuery)-->
+<script src={{ asset('assets/js/menu.js') }}></script>
+
+</body>
+{#//__________________________________________________________________________________________________________BODY END#}
+
+</html>

@@ -1,0 +1,200 @@
+{#la … extends me permets d'appeler le fichier partiel qui regroupe le 'header' et 'footer' présent sur toutes les pages de mon site#}
+{% extends 'baseUser/base.html.twig' %}
+
+    {# j'intègre le contenu de ma page entre le 'block' et le 'endblock'#}
+     {% block content %}
+
+
+
+         <div  class="home_content">
+
+             <div  class="img_content">
+                 <img src="{{ asset('assets/img/home_1920.png') }}" alt="visuel les cabanes"/>
+             </div>
+
+            <div class="logo">
+                 <a href="{{ path ('home') }}">
+                     <img src="{{ asset('assets/logo/logo_1000.png') }}" alt="logo Yvette">
+                 </a>
+             </div>
+
+        </div>
+
+         {#________________________________________________GALLERY____________________________________________________#}
+        <section id="gallery_menu">
+                 {#_____________________________________________________________________________________titre gallerie#}
+                 <div class="titre_gallery">
+                     <h1>Galerie</h1>
+                     <hr class="hr_gallery">
+                     <p class="titre_gallery">À travers la pinède, dans un environnement calme et verdoyant,
+                         <br>découvrez cette ravissante maison au style cabane.
+                         <br>D’une surface de 200 m2,
+                         <br>cette propriété s’étend un vaste terrain arboré de 1300 m2.
+                     </p>
+                 </div>
+
+                 {#_________________________________________________________________________________END_titre gallerie#}
+                 {#____________________________________________________________________________________________image 1#}
+                 <section>
+                    <div class="gallery">
+                         <div class="img_gallery">
+                             <img src="{{ asset('assets/img/img1.png') }}" alt="photo de la façade de la maison"/>
+                         </div>
+
+                         <div class="text_gallery_R">
+                             <h2 class="text_gallery_title">Notre maison</h2>
+                             <p>En franchissant la porte d’entrée, vous accéderez au salon, chaleureux et à l’esprit bois conservé.
+                                 Un véritable nid douillet qui revête les aspects d’un élégant chalet.
+                                 L’authenticité de cet espace de vie en fait une pièce réconfortante, idéale pour accueillir vos proches.</p>
+                         </div>
+                     </div>
+                 </section>
+                {#_____________________________________________________________________________________________image 2#}
+                <section>
+                     <div class="gallery">
+
+                         <div class="text_gallery_L">
+                             <h2 class="text_gallery_title">Notre jardin</h2>
+                             <p>Vous disposerez également d’une belle cuisine, entièrement équipée.
+                                 Sur le même niveau, une chambre avec salle d’eau
+                                 et vue sur l’extérieur est à votre disposition.
+                                 Une suite parentale avec salle d’eau et dressing bénéficie de son propre accès sur la terrasse.
+                                 Pour clore le niveau, une buanderie se révèlera aussi discrète qu’indispensable.
+                                 À l’étage, 2 chambres viennent compléter l’espace nuit.</p>
+                         </div>
+
+                         <div class="img_gallery">
+                             <img src="{{ asset('assets/img/img1.png') }}" alt="photo de la façade de la maison"/>
+                         </div>
+                     </div>
+                </section>
+                 {#____________________________________________________________________________________________image 3#}
+                 <section>
+                     <div class="gallery">
+                         <div class="img_gallery">
+                             <img src="{{ asset('assets/img/img1.png') }}" alt="photo de la façade de la maison"/>
+                         </div>
+
+                         <div class="text_gallery_R">
+                             <h2 class="text_gallery_title">Notre pièce à vivre</h2>
+                             <p>En franchissant la porte d’entrée, vous accéderez au salon, chaleureux et à l’esprit bois conservé.
+                                 Un véritable nid douillet qui revête les aspects d’un élégant chalet.
+                                 L’authenticité de cet espace de vie en fait une pièce réconfortante, idéale pour accueillir vos proches.</p>
+                         </div>
+                     </div>
+                 </section>
+                 {#____________________________________________________________________________________________image 4#}
+                 <section>
+                     <div class="gallery">
+
+                         <div class="text_gallery_L">
+                             <h2 class="text_gallery_title">Notre première chambre</h2>
+                             <p>Vous disposerez également d’une belle cuisine, entièrement équipée.
+                                 Sur le même niveau, une chambre avec salle d’eau
+                                 et vue sur l’extérieur est à votre disposition.
+                                 Une suite parentale avec salle d’eau et dressing bénéficie de son propre accès sur la terrasse.
+                                 Pour clore le niveau, une buanderie se révèlera aussi discrète qu’indispensable.
+                                 À l’étage, 2 chambres viennent compléter l’espace nuit.</p>
+                         </div>
+
+                         <div class="img_gallery">
+                             <img src="{{ asset('assets/img/img1.png') }}" alt="photo de la façade de la maison"/>
+                         </div>
+                     </div>
+                 </section>
+                 {#____________________________________________________________________________________________image 5#}
+                 <section>
+                     <div class="gallery">
+                         <div class="img_gallery">
+                             <img src="{{ asset('assets/img/img1.png') }}" alt="photo de la façade de la maison"/>
+                         </div>
+
+                         <div class="text_gallery_R">
+                             <h2 class="text_gallery_title">Notre deuxième chambre</h2>
+                             <p>En franchissant la porte d’entrée, vous accéderez au salon, chaleureux et à l’esprit bois conservé.
+                                 Un véritable nid douillet qui revête les aspects d’un élégant chalet.
+                                 L’authenticité de cet espace de vie en fait une pièce réconfortante, idéale pour accueillir vos proches.</p>
+                         </div>
+                     </div>
+                 </section>
+                 {#____________________________________________________________________________________________image 6#}
+                 <section>
+                     <div class="gallery">
+
+                         <div class="text_gallery_L">
+                             <h2 class="text_gallery_title">Notre cuisine</h2>
+                             <p>Vous disposerez également d’une belle cuisine, entièrement équipée.
+                                 Sur le même niveau, une chambre avec salle d’eau
+                                 et vue sur l’extérieur est à votre disposition.
+                                 Une suite parentale avec salle d’eau et dressing bénéficie de son propre accès sur la terrasse.
+                                 Pour clore le niveau, une buanderie se révèlera aussi discrète qu’indispensable.
+                                 À l’étage, 2 chambres viennent compléter l’espace nuit.</p>
+                         </div>
+
+                         <div class="img_gallery">
+                             <img src="{{ asset('assets/img/img1.png') }}" alt="photo de la façade de la maison"/>
+                         </div>
+                     </div>
+                 </section>
+
+        </section>
+
+         {#________________________________________________TARIF______________________________________________________#}
+         {#_____________________________________________________________________________________titre tarif#}
+         <section  id="tarif_menu">
+             <div class="titre_gallery">
+                 <h1>Tarif</h1>
+                 <hr class="hr_gallery">
+                 <p class="titre_gallery">Nos locations sont composées de deux saisons.
+                     <br>Le bien est disponible du mois d'Avril à Septembre.
+                     <br>Ces tarifs sont à titre indicatif,
+                     <br>n'hésitez pas à nous contacter pour un devis personnalisé.
+                 </p>
+             </div>
+
+         {#_________________________________________________________________________________END_titre gallerie#}
+
+             <section class="tarif">
+                 <div class="tarif_basse_saison_h1">
+                     <h1>Basse saison</h1>
+                 </div>
+                <div class="tarif_basse_saison_prix">
+                    <div>Avril à Juin</div>
+                    <div>650 € / la semaine</div>
+                </div>
+
+                 <div class="tarif_haute_saison_h1">
+                     <h1>Haute saison</h1>
+                 </div>
+                 <div class="tarif_haute_saison_prix">
+                     <div>Juillet à Septembre</div>
+                     <div>850 € / la semaine</div>
+                 </div>
+            </section>
+         </section>
+         {#________________________________________________TARIF END__________________________________________________#}
+
+         {#_______________________________________________FORMULAIRE__________________________________________________#}
+         <section class="formulaire" id="contact_menu">
+             <div class="titre_formulaire">
+                 <h1 class="titre_formulaire_h1">Formulaire <br> de contact</h1>
+                 <hr class="hr_gallery">
+                 <p class="titre_formulaire">Notre formulaire est à votre disposition pour toutes demandes d'informations complémentaires.
+                 </p>
+             </div>
+
+         </section>
+
+     {% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
